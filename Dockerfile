@@ -87,7 +87,7 @@ RUN pip install -v --disable-pip-version-check --no-cache-dir --global-option="-
 
 COPY configs/gen_docs.py .
 
-RUN gen_docs.py
+RUN python gen_docs.py
 
 # Clear staging
 RUN mkdir -p /tmp && chmod 0777 /tmp
