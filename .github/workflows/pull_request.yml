@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: |
           rm megatron/__init__.py
+          pip install shortuuid
           python configs/gen_docs.py
           git config user.name github-actions
           git config user.email github-actions@github.com
