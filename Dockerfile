@@ -88,7 +88,8 @@ RUN pip install -v --disable-pip-version-check --no-cache-dir --global-option="-
 RUN mkdir -p megatron/
 COPY configs/gen_docs.py .
 COPY megatron/* megatron/
-RUN /bin/bash -c "ls"
+RUN /bin/bash -c "ls megatron/"
+RUN /bin/bash -c "ls megatron/neox_arguments/"
 RUN python gen_docs.py
 
 # Clear staging
