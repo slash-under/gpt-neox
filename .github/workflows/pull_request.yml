@@ -19,6 +19,7 @@ jobs:
       - run: |
           rm megatron/__init__.py
           pip install shortuuid
+          rm megatron/neox_arguments/__init__.py
           python configs/gen_docs.py
           git config user.name github-actions
           git config user.email github-actions@github.com
